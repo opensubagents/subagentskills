@@ -1,0 +1,87 @@
+{
+  "$schema": "https://agentskills.io/schemas/marketplace.v1.json",
+  "name": "opensubagents-skills",
+  "owner": "opensubagents",
+  "description": "Catalog of Agent Skills used across the opensubagents stack — orchestrate paired MCP plugins, validate org-specific data shapes, and generate canonical reports.",
+  "homepage": "https://github.com/opensubagents/subagentskills",
+  "license": "MIT",
+  "version": "0.1.0",
+  "skills": [
+    {
+      "id": "ts-bootstrap",
+      "name": "ts-bootstrap",
+      "description": "Bootstrap TypeScript projects in cloud web sandboxes by driving the @opensubagents/ts-bootstrap-mcp plugin's 7 tools. Scaffolds node-cli, cf-worker, mcp-server, or lib templates.",
+      "status": "released",
+      "source": {
+        "kind": "in-repo",
+        "path": "skills/ts-bootstrap"
+      },
+      "pairs_with_plugin": "@opensubagents/ts-bootstrap-mcp",
+      "version": "0.1.0",
+      "tags": ["typescript", "bootstrap", "mcp-server", "cloudflare-worker"]
+    },
+
+    {
+      "id": "reveal-and-restore-worker-token",
+      "name": "reveal-and-restore-worker-token",
+      "description": "Operational pattern for rotating a Cloudflare Worker secret in place without leaking the token to chat history. Reveals, captures into a scoped env var, restores the binding, then unsets.",
+      "status": "planned",
+      "source": {
+        "kind": "in-repo",
+        "path": "skills/reveal-and-restore-worker-token"
+      },
+      "version": "0.0.0",
+      "tags": ["cloudflare", "secrets", "ops-pattern"]
+    },
+    {
+      "id": "html-effectiveness-builder",
+      "name": "html-effectiveness-builder",
+      "description": "Generate self-contained HTML artifacts matching the Thariq html-effectiveness gallery format (CSS custom properties, no JS deps, mobile-readable, clickable focus interaction).",
+      "status": "planned",
+      "source": {
+        "kind": "in-repo",
+        "path": "skills/html-effectiveness-builder"
+      },
+      "version": "0.0.0",
+      "tags": ["html", "rendering", "reports"]
+    },
+    {
+      "id": "subagenttasks-validator",
+      "name": "subagenttasks-validator",
+      "description": "Validate a tasks.json file against the canonical opensubagents/subagenttasks JSON Schema using ajv-2020. Returns parsed diagnostics with JSON pointers.",
+      "status": "planned",
+      "source": {
+        "kind": "in-repo",
+        "path": "skills/subagenttasks-validator"
+      },
+      "pairs_with_package": "@opensubagents/subagenttasks",
+      "version": "0.0.0",
+      "tags": ["validation", "json-schema", "tasks"]
+    },
+    {
+      "id": "graphql-erd-from-zod",
+      "name": "graphql-erd-from-zod",
+      "description": "Derive a GraphQL ERD from a Zod schema file, then emit a Thariq-format interactive HTML diagram. The path used to bootstrap subagentarch.",
+      "status": "planned",
+      "source": {
+        "kind": "in-repo",
+        "path": "skills/graphql-erd-from-zod"
+      },
+      "version": "0.0.0",
+      "tags": ["graphql", "zod", "erd", "html"]
+    },
+    {
+      "id": "brief-author-canonical",
+      "name": "brief-author-canonical",
+      "description": "Author a brief in the canonical opensubagents/subagentbriefs shape (frontmatter + summary + body + initiatives + tasks-to-emit links). Validates against the brief schema before write.",
+      "status": "planned",
+      "source": {
+        "kind": "in-repo",
+        "path": "skills/brief-author-canonical"
+      },
+      "pairs_with_package": "@opensubagents/subagentbriefs",
+      "version": "0.0.0",
+      "tags": ["docs", "briefs", "authoring"]
+    }
+  ]
+}
