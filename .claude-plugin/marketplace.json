@@ -82,6 +82,32 @@
       "pairs_with_package": "@opensubagents/subagentbriefs",
       "version": "0.0.0",
       "tags": ["docs", "briefs", "authoring"]
+    },
+    {
+      "id": "structured-research-output",
+      "name": "structured-research-output",
+      "description": "Deliver research findings as decomposed atomic items (numbered claims, vendor checklists with status markers, single decision block) instead of prose, and maintain a session-level URL ledger that accumulates every source touched during research.",
+      "status": "released",
+      "source": {
+        "kind": "in-repo",
+        "path": "skills/structured-research-output"
+      },
+      "pairs_with_skill": "research-brief-xml",
+      "version": "0.1.0",
+      "tags": ["research", "output-format", "url-ledger", "atomic-output"]
+    },
+    {
+      "id": "research-brief-xml",
+      "name": "research-brief-xml",
+      "description": "Author or follow elaborate XML-tagged research briefs for high-stakes research tasks. Mode A follows an operator-supplied XML brief verbatim; Mode B drafts one from a casual request. Pairs with structured-research-output.",
+      "status": "released",
+      "source": {
+        "kind": "in-repo",
+        "path": "skills/research-brief-xml"
+      },
+      "pairs_with_skill": "structured-research-output",
+      "version": "0.1.0",
+      "tags": ["research", "xml-brief", "prompt-engineering"]
     }
   ]
 }
