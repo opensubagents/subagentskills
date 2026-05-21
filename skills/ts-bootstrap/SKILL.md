@@ -86,7 +86,7 @@ Match the preset to the template you scaffolded.
 
 ## Standard workflows
 
-Each workflow is a tool call sequence. Pick the one that matches the user's intent, then emit the calls in order. Detailed recipes in `references/workflows.md`.
+Each workflow is a tool call sequence. Pick the one that matches the user's intent, then emit the calls in order. Detailed recipes in `references/flows.md`.
 
 ### A — Fresh MCP server (most common in this org)
 
@@ -160,7 +160,7 @@ More in `references/troubleshooting.md`.
 
 ## Bundled references
 
-- `references/workflows.md` — the four workflows above, expanded with full JSON of every tool call and the expected `structuredContent` shape
+- `references/flows.md` — the four workflows above, expanded with full JSON of every tool call and the expected `structuredContent` shape
 - `references/tool-schemas.md` — Zod inputSchema + outputSchema for each of the 7 tools, copied from the plugin source
 - `references/troubleshooting.md` — every known failure mode and its fix
 
