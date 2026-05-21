@@ -9,6 +9,8 @@ Each skill is a directory containing `SKILL.md` plus optional `references/`, `sc
 | Skill | Status | Pairs with | Tags |
 |---|---|---|---|
 | [`ts-bootstrap`](./skills/ts-bootstrap/) | released | [`@opensubagents/ts-bootstrap-mcp`](https://github.com/opensubagents/ts-bootstrap-mcp) | typescript, bootstrap, mcp-server, cloudflare-worker |
+| [`structured-research-output`](./skills/structured-research-output/) | released | [`research-brief-xml`](./skills/research-brief-xml/) | research, output-format, url-ledger, atomic-output |
+| [`research-brief-xml`](./skills/research-brief-xml/) | released | [`structured-research-output`](./skills/structured-research-output/) | research, xml-brief, prompt-engineering |
 | `reveal-and-restore-worker-token` | planned | — | cloudflare, secrets, ops-pattern |
 | `html-effectiveness-builder` | planned | — | html, rendering, reports |
 | `subagenttasks-validator` | planned | [`@opensubagents/subagenttasks`](https://github.com/opensubagents/subagenttasks) | validation, json-schema, tasks |
