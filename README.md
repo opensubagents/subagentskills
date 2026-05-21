@@ -90,6 +90,19 @@ See [`CLAUDE.md`](./CLAUDE.md) for coding-agent guidance and [`spec/agent-skills
 - `evals/` — Neon-style per-skill test fixtures
 - `.github/workflows/bump-skill-shas.yml` — nightly SHA pin updates via the `gh-pr-mcp` worker
 
+## Setup notes (initial commit)
+
+The initial commit was pushed by an automated worker whose token did **not** include `workflows: write` scope. As a result, two CI files that the design calls for were not landed by the bootstrap commit and need to be added manually (one-time setup):
+
+- `.github/workflows/validate-frontmatter.yml`
+- `.github/workflows/validate-marketplace.yml`
+
+Both YAMLs are provided in the chat session that bootstrapped this repo. Drop them in via the GitHub web UI (Add file → Create new file), or re-push from a local checkout once the workflow files are committed.
+
+Until these two files exist, the catalog has no automated validation — `marketplace.json` and skill frontmatter can drift. Adding them is the first follow-up task.
+
+Also: the two `scripts/*.sh` files inside `skills/ts-bootstrap/` are mode `100644` (not `100755`) because the Contents API used for this initial commit does not preserve executable bits. Either `chmod +x` them after clone, or land a follow-up commit via the Git Trees API that sets the right mode.
+
 ## License
 
 MIT — matches the sibling opensubagents repos.
